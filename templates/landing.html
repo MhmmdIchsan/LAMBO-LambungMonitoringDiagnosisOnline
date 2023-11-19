@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+
+    <style>
+        body {
+            transition: background-color 0.5s ease; /* Efek transisi untuk latar belakang */
+            background-image: url("{{ url_for('static', filename='images/landing.png') }}");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            display: flex;
+            /* Enable flexbox */
+            justify-content: center;
+            /* Center horizontally */
+            align-items: center;
+            /* Center vertically */
+            height: 100vh;
+            /* Full height of the viewport */
+            margin: 0;
+            /* Remove default margin */
+            user-select: none
+        }
+
+        .container {
+            width: 100%;
+            /* Full width to center properly */
+            max-width: 800px;
+            /* Max width of the container */
+            padding: 20px;
+            box-sizing: border-box;
+            /* Include padding in the width */
+        }
+
+        h1 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: bold;
+            text-align: center;
+            font-size: 48px;
+            margin-bottom: 20px;
+            text-shadow: black 2px 1px;
+        }
+
+        h3 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 30px;
+            text-shadow: black 2px 1px;
+        }
+
+        img {
+            display: block;
+            margin: 0 auto;
+            width: 100%;
+            max-width: 600px;
+        }
+
+        a {
+            text-decoration: none;
+            margin: auto;
+        }
+
+
+        .start-button {
+            display: inline-block;
+            margin: auto;
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: #fff;
+            font-size: 20px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        /* Wrapper for the input and icon */
+        .input-group {
+            position: relative;
+            width: 100%;
+            max-width: 360px;
+            margin: auto;
+        }
+
+        input[type="text"] {
+            border: 1px solid black;
+            border-radius: 10px;
+            padding: 15px 20px 15px 45px;
+            width: 100%;
+            box-sizing: border-box;
+            margin: 70px 0;
+            /* Tambahkan margin atas dan bawah di sini */
+        }
+
+        .icon {
+            position: absolute;
+            left: 15px;
+            /* Sesuaikan nilai ini untuk mengatur jarak ikon dari sisi kiri */
+            /* Sesuaikan nilai ini untuk mengatur jarak ikon dari sisi kiri */
+            top: 92px;
+            /* Sesuaikan nilai ini untuk mengatur jarak ikon dari sisi atas */
+            transform: translateY(-50%);
+            width: 20px;
+            height: 20px;
+            pointer-events: none;
+        }
+
+
+        .button-diagnosa {
+            display: flex;
+            align-items: center;
+            position: relative;
+            padding: 15px 50px;
+            border-radius: 15px;
+            border: none;
+            background-color: #71D4C9;
+            color: black;
+            text-align: center;
+            font-size: 18px;
+            cursor: pointer;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            text-decoration: none;
+        }
+
+
+
+        .roket img {
+            width: 28px;
+            /* Increase the width for a slightly larger icon */
+            height: auto;
+            /* Maintains the aspect ratio of the image */
+            margin-right: 8px;
+            /* Adds space between the icon and the text */
+        }
+
+        /* Optional: Add space between the icon and the text */
+        .button-diagnosa .roket img {
+            margin-right: 8px;
+        }
+
+        .center-horizontal {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .button-diagnosa:hover {
+            background-color: #5FC2B2;
+            /* Ganti warna latar belakang hover sesuai keinginan Anda */
+            color: white;
+            /* Ganti warna teks pada hover sesuai keinginan Anda */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Selamat Datang di LAMBO</h1>
+        <h3>Lambung Monitoring & Diagnosis Online</h3>
+        <img src="{{ url_for('static', filename='images/gambar.png') }}" alt="">
+        <div class="input-group">
+            <form method="POST">
+                <i class="icon"><img class="gambar" src="{{ url_for('static', filename='images/user.png') }}"
+                        alt=""></i>
+                <div class="center-horizontal">
+                    <input type="text" name="nama" required placeholder="Silahkan Masukkan Nama Anda">
+                    <button type="submit" class="button-diagnosa">
+                        <i class="roket"> <img class="gambar" src="{{ url_for('static', filename='images/roket.png') }}"
+                                alt=""></i>
+                        Mulai Diagnosa
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
