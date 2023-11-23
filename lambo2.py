@@ -35,15 +35,35 @@ def deteksi_penyakit_lambung(gejala_terpilih, gejala_weights):
 
 def solusi_dan_obat(penyakit):
     solusi_obat = {
-        'Gastritis': {'solusi': 'Hindari makanan pedas dan asam, konsumsi makanan rendah lemak.', 'obat': 'Antasida'},
-        'Dispepsia': {'solusi': 'Makan secara teratur, hindari makanan pedas dan asam.', 'obat': 'Antasida'},
-        'Kanker Lambung': {'solusi': 'Pengobatan kanker, operasi, kemoterapi.', 'obat': 'Sesuai resep dokter'},
-        'GERD': {'solusi': 'Hindari makanan berlemak dan pedas, minum obat antasida.', 'obat': 'Antasida, Inhibitor pompa proton'},
-        'Gastroenteritis': {'solusi': 'Istirahat, minum cairan elektrolit, hindari makanan berat.', 'obat': 'Antidiare, Rehidrasi'},
-        'Gastroparesis': {'solusi': 'Makan dalam porsi kecil, hindari makanan tinggi serat.', 'obat': 'Obat prokinetik, Inhibitor pompa proton'},
-        'Tukak Lambung': {'solusi': 'Hindari makanan pedas dan asam, konsumsi makanan rendah lemak.', 'obat': 'Antasida, Antibiotik'}
+        'Gastritis': {
+            'solusi': 'Hindari makanan pedas dan asam, konsumsi makanan rendah lemak. Disarankan untuk menghindari kafein dan alkohol.',
+            'obat': 'Antasida'
+        },
+        'Dispepsia': {
+            'solusi': 'Makan secara teratur dan hindari makanan pedas dan asam. Olahraga ringan setelah makan dapat membantu pencernaan.',
+            'obat': 'Antasida'
+        },
+        'Kanker Lambung': {
+            'solusi': 'Pengobatan kanker, seperti kemoterapi dan radioterapi, perlu diikuti dengan ketat. Pilihan pengobatan tergantung pada tingkat keparahan kanker.',
+            'obat': 'Sesuai resep dokter'
+        },
+        'GERD': {
+            'solusi': 'Hindari makanan berlemak dan pedas. Minum obat antasida secara teratur dan pertimbangkan penggunaan inhibitor pompa proton.',
+            'obat': 'Antasida, Inhibitor pompa proton'
+        },
+        'Gastroenteritis': {
+            'solusi': 'Istirahat, minum cairan elektrolit untuk mencegah dehidrasi, dan hindari makanan berat.',
+            'obat': 'Antidiare, Rehidrasi'
+        },
+        'Gastroparesis': {
+            'solusi': 'Makan dalam porsi kecil, hindari makanan tinggi serat. Pertimbangkan untuk berkonsultasi dengan ahli gizi.',
+            'obat': 'Obat prokinetik, Inhibitor pompa proton'
+        },
+        'Tukak Lambung': {
+            'solusi': 'Hindari makanan pedas dan asam, konsumsi makanan rendah lemak. Istirahat yang cukup juga penting.',
+            'obat': 'Antasida, Antibiotik'
+        }
     }
-
     return solusi_obat.get(penyakit, {'solusi': 'Tidak ada informasi solusi yang tersedia', 'obat': 'Tidak ada informasi obat yang tersedia'})
 
 # These are your global variables that are used in the functions above
