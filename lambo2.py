@@ -36,35 +36,35 @@ def deteksi_penyakit_lambung(gejala_terpilih, gejala_weights):
 def solusi_dan_obat(penyakit):
     solusi_obat = {
         'Gastritis': {
-            'solusi': 'Hindari makanan pedas dan asam, konsumsi makanan rendah lemak. Disarankan untuk menghindari kafein dan alkohol.',
-            'obat': 'Antasida'
+            'solusi': 'Mencuci tangan dengan sabun dan air mengalir sebelum masak dan makan, untuk mencegah penularan infeksi bakteri pylori, menghindari makanan pedas, asam, atau berlemak, mengonsumsi makanan dengan porsi lebih kecil tetapi sering, tidak berbaring setelah makan atau tunggu 2–3 jam setelah makan, mengurangi konsumsi minuman berkafein dan beralkohol, mengelola stres dengan baik, dan menghindari konsumsi obat pereda nyeri secara berlebihan atau tanpa seizin dokter',
+            'obat': 'antasida, famotidine, cimetidine, ranitidineomeprazole, lansoprazole, rabeprazole, esomeprazole, dexlansoprazole, pantoprazole'
         },
         'Dispepsia': {
-            'solusi': 'Makan secara teratur dan hindari makanan pedas dan asam. Olahraga ringan setelah makan dapat membantu pencernaan.',
-            'obat': 'Antasida'
+            'solusi': 'Menjalani pola makan sehat, mempertahankan berat badan ideal, berolahraga secara teratur, mengurangi stres, dan menghindari kebiasaan berbaring setelah makan.',
+            'obat': 'antasida, Proton Pump Inhibitors (PPI). H-2 receptor antagonists (H2RAs) , antibiotik, antidepresan.'
         },
         'Kanker Lambung': {
-            'solusi': 'Pengobatan kanker, seperti kemoterapi dan radioterapi, perlu diikuti dengan ketat. Pilihan pengobatan tergantung pada tingkat keparahan kanker.',
-            'obat': 'Sesuai resep dokter'
+            'solusi': 'Pilihan pengobatan tergantung pada tingkat keparahan kanker berdasarkan arahan dokter. Pengobatan kanker.',
+            'obat': 'Harap konsultasi lebih lanjut dengan dokter spesialis'
         },
         'GERD': {
-            'solusi': 'Hindari makanan berlemak dan pedas. Minum obat antasida secara teratur dan pertimbangkan penggunaan inhibitor pompa proton.',
-            'obat': 'Antasida, Inhibitor pompa proton'
+            'solusi': 'Menghindari makanan berlemak dan pedas, berhenti merokok,  menghindari makanan besar dan berat saat malam hari, menunggu beberapa jam setelah makan untuk berbaring, meninggikan kepala saat tidur, menggunakan bantal yang lebih tinggi, makan dengan porsi yang kecil, tetapi sering. ',
+            'obat': 'antasida, Proton Pump Inhibitors, (PPI), Penghambat Reseptor H2.'
         },
         'Gastroenteritis': {
-            'solusi': 'Istirahat, minum cairan elektrolit untuk mencegah dehidrasi, dan hindari makanan berat.',
-            'obat': 'Antidiare, Rehidrasi'
+            'solusi': 'Istirahat,hindari mengkonsumsi makanan mentah, baik sayuran maupun buah-buahan yang sudah dikupas atau disentuh oleh tangan orang lain, jangan mengonsumsi daging yang tidak dimasak dengan matang. Belilah air minum dalam kemasan untuk menghindari mengonsumsi air yang terkontaminasi, hindari mengkonsumsi es batu yang kebersihannya tidak terjamin, bisa jadi air yang digunakan untuk membuat es sudah terkontaminasi oleh virus.',
+            'obat': 'mengkonsumsi antidiare, oralit (rehidrasi)'
         },
         'Gastroparesis': {
-            'solusi': 'Makan dalam porsi kecil, hindari makanan tinggi serat. Pertimbangkan untuk berkonsultasi dengan ahli gizi.',
-            'obat': 'Obat prokinetik, Inhibitor pompa proton'
+            'solusi': 'Memperbaiki pola makan, lakukan olahraga secara rutin dan konsumsi suplemen vitamin harian dengan terlebih dahulu berkonsultasi dengan dokter. Pada penderita diabetes, jalani pola makan sehat dan pengobatan yang sesuai anjuran dokter agar kadar gula darahnya selalu terkontrol.',
+            'obat': 'obat prokinetik (Metoclopramide atau erythromycin), inhibitor pompa proton, obat antiemetik (domperidone atau ondansetron), obat pereda nyeri.'
         },
         'Tukak Lambung': {
-            'solusi': 'Hindari makanan pedas dan asam, konsumsi makanan rendah lemak. Istirahat yang cukup juga penting.',
-            'obat': 'Antasida, Antibiotik'
+            'solusi': 'Menjaga kebersihan, berhati-hati dalam penggunaan obat anti inflamasi non-steroid agar tidak berlebihan, mengurangi atau berhenti merokok, menghindari konsumsi minuman beralkohol.',
+            'obat': ' Bismuth subsalicylate, antasida, antibiotik, Proton Pump Inhibitors, (PPI), Antagonis H2 (cimetidine, famotidine, dan ranitidin.)'
         }
     }
-    return solusi_obat.get(penyakit, {'solusi': 'Tidak ada informasi solusi yang tersedia', 'obat': 'Tidak ada informasi obat yang tersedia'})
+    return solusi_obat.get(penyakit, {'solusi': 'Tidak ada informasi solusi yang tersedia, harap konsultasi dengan dokter specialis', 'obat': 'Tidak ada informasi obat yang tersedia, harap konsultasi ke dokter spesialis'})
 
 # These are your global variables that are used in the functions above
 gejala_weights = [
