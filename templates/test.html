@@ -1,346 +1,340 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Deteksi Penyakit Lambung</title>
     <style>
-        body {
-            background-color: #DBEFEC;
-            font-family: 'Poppins', sans-serif;
-            margin: 0;
-            padding: 0;
-        }
+      body {
+        background-color: #dbefec;
+        font-family: "Poppins", sans-serif;
+        margin: 0;
+        padding: 0;
+      }
 
-        h2 {
-            font-family: 'Poppins', sans-serif;
-            font-weight: 400;
-            text-align: center;
-            font-size: 26px;
-            margin-bottom: 30px;
-            color: #FFFFFF;
-        }
+      h2 {
+        font-family: "Poppins", sans-serif;
+        font-weight: 400;
+        text-align: center;
+        font-size: 26px;
+        margin-bottom: 30px;
+        color: #ffffff;
+      }
 
-        .home-section {
-            display: flex;
-            justify-content: center;
-            /* Centers the content horizontally */
-            align-items: center;
-            padding: 40px 0;
-            /* Adjust the vertical padding to match your design */
-            /* The background color of the section */
-            border-radius: 16px;
-            /* Rounded corners as in the image */
-            margin-bottom: 40px;
-            /* Add bottom margin to create space between sections */
-        }
+      .home-section {
+        display: flex;
+        justify-content: center;
+        /* Centers the content horizontally */
+        align-items: center;
+        padding: 40px 0;
+        /* Adjust the vertical padding to match your design */
+        /* The background color of the section */
+        border-radius: 16px;
+        /* Rounded corners as in the image */
+        margin-bottom: 40px;
+        /* Add bottom margin to create space between sections */
+      }
 
-        .home-content {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            /* Adds space between the text and the illustration */
-            max-width: 900px;
-            /* Adjust to your layout's width */
-            width: 100%;
-            /* Ensures the content is responsive */
-            margin: 0 auto;
-            /* Centers the content */
-            padding: 0 20px;
-            /* Space on the sides */
-        }
+      .home-content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        /* Adds space between the text and the illustration */
+        max-width: 900px;
+        /* Adjust to your layout's width */
+        width: 100%;
+        /* Ensures the content is responsive */
+        margin: 0 auto;
+        /* Centers the content */
+        padding: 0 20px;
+        /* Space on the sides */
+      }
 
-        .text-content {
-            text-align: left;
-            /* Aligns text to the left */
-            margin-right: 50px;
-            /* Right margin for the text */
-        }
+      .text-content {
+        text-align: left;
+        /* Aligns text to the left */
+        margin-right: 50px;
+        /* Right margin for the text */
+      }
 
-        .home-section h1 {
-            font-size: 2.5em;
-            color: #333;
-            margin-bottom: 0.5em;
-            /* Space between h1 and p */
-        }
+      .home-section h1 {
+        font-size: 2.5em;
+        color: #333;
+        margin-bottom: 0.5em;
+        /* Space between h1 and p */
+      }
 
-        .home-section p {
-            font-size: 1.2em;
-            color: #666;
-            margin-right: 100px;
-            /* Right margin to prevent text from being too long */
-        }
+      .home-section p {
+        font-size: 1.2em;
+        color: #666;
+        margin-right: 100px;
+        /* Right margin to prevent text from being too long */
+      }
 
-        .second-section {
-            display: flex;
-            justify-content: center;
-            /* Centers the content horizontally */
-            align-items: center;
-            padding: 40px 0;
-            /* Adjust the vertical padding to match your design */
-            /* The background color of the section */
-            border-radius: 16px;
-            /* Rounded corners as in the image */
-            margin-bottom: 40px;
-            /* Add bottom margin to create space between sections */
-        }
+      .second-section {
+        display: flex;
+        justify-content: center;
+        /* Centers the content horizontally */
+        align-items: center;
+        padding: 40px 0;
+        /* Adjust the vertical padding to match your design */
+        /* The background color of the section */
+        border-radius: 16px;
+        /* Rounded corners as in the image */
+        margin-bottom: 40px;
+        /* Add bottom margin to create space between sections */
+      }
 
-        .second-section h1 {
-            font-size: 2.5em;
-            color: #333;
-            margin-bottom: 0.5em;
-            /* Space between h1 and p */
-        }
+      .second-section h1 {
+        font-size: 2.5em;
+        color: #333;
+        margin-bottom: 0.5em;
+        /* Space between h1 and p */
+      }
 
-        .second-section p {
-            font-size: 1.2em;
-            color: #666;
-            margin-right: 100px;
-            /* Right margin to prevent text from being too long */
-        }
+      .second-section p {
+        font-size: 1.2em;
+        color: #666;
+        margin-right: 100px;
+        /* Right margin to prevent text from being too long */
+      }
 
-        .illustration {
-            background: url('static/images/form.png') no-repeat center center;
-            background-size: cover;
-            width: 200px;
-            /* Adjust as necessary */
-            height: 200px;
-            /* Adjust as necessary */
-            border-radius: 16px;
-            /* Matches the image's rounded corners */
-        }
+      .illustration {
+        background: url("static/images/form.png") no-repeat center center;
+        background-size: cover;
+        width: 200px;
+        /* Adjust as necessary */
+        height: 200px;
+        /* Adjust as necessary */
+        border-radius: 16px;
+        /* Matches the image's rounded corners */
+      }
 
-        .illustration2 {
-            background: url('static/images/form2.png') no-repeat center center;
-            background-size: cover;
-            width: 200px;
-            /* Adjust as necessary */
-            height: 200px;
-            /* Adjust as necessary */
-            border-radius: 16px;
-            /* Matches the image's rounded corners */
-        }
+      .illustration2 {
+        background: url("static/images/form2.png") no-repeat center center;
+        background-size: cover;
+        width: 200px;
+        /* Adjust as necessary */
+        height: 200px;
+        /* Adjust as necessary */
+        border-radius: 16px;
+        /* Matches the image's rounded corners */
+      }
 
-        .illustration3 { 
-            background: url('static/images/form3.png') no-repeat center center;
-            background-size: contain;
-            width: 200px;
-            /* Adjust as necessary */
-            height: 200px;
-            /* Adjust as necessary */
-            border-radius: 16px;
-            /* Matches the image's rounded corners */
-        }
+      .illustration3 {
+        background: url("static/images/form3.png") no-repeat center center;
+        background-size: contain;
+        width: 200px;
+        /* Adjust as necessary */
+        height: 200px;
+        /* Adjust as necessary */
+        border-radius: 16px;
+        /* Matches the image's rounded corners */
+      }
 
-        .container {
-            max-width: 900px;
-            /* Match this width to the .home-content width for alignment */
-            margin: -50px auto 0;
-            /* Aligns top of the form with bottom of .home-section */
-            padding: 20px;
-            /* Color from your image */
-            border-radius: 8px;
-            position: relative;
-            /* For layering and alignment */
-            z-index: 2;
-            /* Ensures it sits above the .home-section */
-        }
+      .container {
+        max-width: 900px;
+        /* Match this width to the .home-content width for alignment */
+        margin: -50px auto 0;
+        /* Aligns top of the form with bottom of .home-section */
+        padding: 20px;
+        /* Color from your image */
+        border-radius: 8px;
+        position: relative;
+        /* For layering and alignment */
+        z-index: 2;
+        /* Ensures it sits above the .home-section */
+      }
 
+      .diagnosis-form {
+        background-color: #6fd4c9;
+        /* Color from your image */
+        padding: 20px;
+        border-radius: 10px;
+        text-align: left;
+        margin: auto;
+        font-weight: 500;
+      }
 
-        .diagnosis-form {
-            background-color: #6FD4C9;
-            /* Color from your image */
-            padding: 20px;
-            border-radius: 10px;
-            text-align: left;
-            margin: auto;
-            font-weight: 500;
-        }
+      /* Modifikasi gaya checkbox */
+      input[type="checkbox"] {
+        margin-right: 10px;
+        transform: scale(1.5);
+        background-color: #bfbfbf;
+        /* Untuk memperbesar checkbox */
+      }
 
-        /* Modifikasi gaya checkbox */
-        input[type="checkbox"] {
-            margin-right: 10px;
-            transform: scale(1.5);
-            background-color: #BFBFBF;
-            /* Untuk memperbesar checkbox */
-        }
+      /* Warna latar belakang checkbox saat dicentang */
+      input[type="checkbox"]:checked {
+        background-color: #888;
+      }
 
-        /* Warna latar belakang checkbox saat dicentang */
-        input[type="checkbox"]:checked {
-            background-color: #888;
+      .checkbox-container {
+        background-color: #ffffff;
+        border-radius: 8px;
+        box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+        margin: 15px auto;
+        /* Penambahan margin atas dan bawah auto dan sisi kiri-kanan 15px */
+        padding: 10px;
+        /* Penambahan padding di dalam div */
+        width: 70%;
+        /* Ganti lebar container sesuai dengan kebutuhan Anda */
+        display: flex;
+        /* Mengatur posisi horizontal ke tengah */
+        align-items: flex-start;
+        /* Mengatur elemen-elemen di dalamnya agar tetap sejajar */
+        text-align: left;
+        /* Mengatur posisi teks ke kiri */
+      }
 
-        }
+      ul {
+        list-style: none;
+        padding: 0;
+      }
 
-        .checkbox-container {
-            background-color: #FFFFFF;
-            border-radius: 8px;
-            box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
-            margin: 15px auto;
-            /* Penambahan margin atas dan bawah auto dan sisi kiri-kanan 15px */
-            padding: 10px;
-            /* Penambahan padding di dalam div */
-            width: 70%;
-            /* Ganti lebar container sesuai dengan kebutuhan Anda */
-            display: flex;
-            /* Mengatur posisi horizontal ke tengah */
-            align-items: flex-start;
-            /* Mengatur elemen-elemen di dalamnya agar tetap sejajar */
-            text-align: left;
-            /* Mengatur posisi teks ke kiri */
-        }
+      label {
+        display: block;
+        margin-bottom: 5px;
+      }
 
+      input[type="checkbox"] {
+        margin-right: 10px;
+      }
 
-        ul {
-            list-style: none;
-            padding: 0;
-        }
+      button {
+        background-color: #4caf50;
+        /* Adjust to match the image */
+        color: white;
+        padding: 15px 30px;
+        /* Larger button */
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 18px;
+        /* Larger font size */
+        display: block;
+        /* Make the button block to fill container */
+        width: 100%;
+        /* Full width */
+        margin-top: 20px;
+        /* Space above the button */
+      }
 
-        label {
-            display: block;
-            margin-bottom: 5px;
-        }
+      button:hover {
+        background-color: #45a049;
+        /* Slightly darker on hover */
+      }
 
-        input[type="checkbox"] {
-            margin-right: 10px;
-        }
+      .results-container {
+        display: flex;
+        justify-content: space-around;
+        max-width: 900px;
+        margin: 20px auto;
+        padding: 20px;
+        background: #dbefec;
+        /* Adjust the background color to match the overall design */
+      }
 
-        button {
-            background-color: #4CAF50;
-            /* Adjust to match the image */
-            color: white;
-            padding: 15px 30px;
-            /* Larger button */
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            font-size: 18px;
-            /* Larger font size */
-            display: block;
-            /* Make the button block to fill container */
-            width: 100%;
-            /* Full width */
-            margin-top: 20px;
-            /* Space above the button */
-        }
+      .recommendations,
+      .diagnosis-results {
+        background: #ffffff;
+        border-radius: 16px;
+        /* Rounded corners as seen in the image */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        flex-basis: 45%;
+        /* Adjust the width of each card to fit content */
+      }
 
-        button:hover {
-            background-color: #45a049;
-            /* Slightly darker on hover */
-        }
+      .no-detection {
+        color: #888;
+        text-align: center;
+        padding: 20px;
+      }
 
-        .results-container {
-            display: flex;
-            justify-content: space-around;
-            max-width: 900px;
-            margin: 20px auto;
-            padding: 20px;
-            background: #DBEFEC;
-            /* Adjust the background color to match the overall design */
-        }
+      .diagnosa-button-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* Sesuaikan lebar wadah sesuai kebutuhan Anda */
+        /* Contoh: width: 200px; */
+      }
 
-        .recommendations,
-        .diagnosis-results {
-            background: #FFFFFF;
-            border-radius: 16px;
-            /* Rounded corners as seen in the image */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-            flex-basis: 45%;
-            /* Adjust the width of each card to fit content */
-        }
+      .diagnosa-button {
+        border: 1px solid white;
+        border-radius: 10px;
+        box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        background-color: #2bae9c;
+        color: white;
+        font-size: 14px;
+        /* Mengurangi ukuran font teks */
+        width: auto;
+        /* Sesuaikan lebar dengan konten di dalamnya */
+      }
 
-        .no-detection {
-            color: #888;
-            text-align: center;
-            padding: 20px;
-        }
+      .icon img {
+        width: 20px;
+        height: 20px;
+        margin-right: 5px;
+      }
 
-        .diagnosa-button-container {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            /* Sesuaikan lebar wadah sesuai kebutuhan Anda */
-            /* Contoh: width: 200px; */
-        }
-
-        .diagnosa-button {
-            border: 1px solid white;
-            border-radius: 10px;
-            box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-            background-color: #2BAE9C;
-            color: white;
-            font-size: 14px;
-            /* Mengurangi ukuran font teks */
-            width: auto;
-            /* Sesuaikan lebar dengan konten di dalamnya */
-        }
-
-        .icon img {
-            width: 20px;
-            height: 20px;
-            margin-right: 5px;
-        }
-
-        /* Jika Anda ingin mengurangi jarak antara ikon dan teks lebih lanjut */
-        .icon {
-            margin-right: 3px;
-        }
+      /* Jika Anda ingin mengurangi jarak antara ikon dan teks lebih lanjut */
+      .icon {
+        margin-right: 3px;
+      }
     </style>
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="home-section">
-        <div class="text-content">
-            <h1>Halo, Username</h1>
-            <p>Kami akan membantu anda dalam mengetahui penyakit lambung yang sedang anda alami:</p>
-        </div>
-        <div class="illustration"></div> <!-- The illustration will go here -->
+      <div class="text-content">
+        <h1>Halo, Username</h1>
+        <p>Kami akan membantu anda dalam mengetahui penyakit lambung yang sedang anda alami:</p>
+      </div>
+      <div class="illustration"></div>
+      <!-- The illustration will go here -->
     </div>
     <div class="container">
-        <div class="diagnosis-form">
-            <form method="POST" action="/form">
-                <h2>Silahkan tandai kolom yang sekiranya relevan bagi anda </h2>
-                <ul>
-                    {% for i in range(15) %}
-                    <div class="checkbox-container">
-                        <li>
-                            <label>
-                                <input type="checkbox" name="gejala_{{ i }}" value="1">
-                                {{ gejala_nama[i] }}
-                            </label>
-                        </li>
-                    </div>
-                    {% endfor %}
-                </ul>
-                <div class="diagnosa-button-container">
-                    <button type="submit" class="diagnosa-button">
-                        <span class="icon"><img src="{{ url_for('static', filename='images/diagnosa.png') }}"
-                                alt=""></span>
-                        Diagnosa
-                    </button>
-                </div>
-            </form>
-        </div>
+      <div class="diagnosis-form">
+        <form method="POST" action="/form">
+          <h2>Silahkan tandai kolom yang sekiranya relevan bagi anda</h2>
+          <ul>
+            {% for i in range(15) %}
+            <div class="checkbox-container">
+              <li>
+                <label>
+                  <input type="checkbox" name="gejala_{{ i }}" value="1" />
+                  {{ gejala_nama[i] }}
+                </label>
+              </li>
+            </div>
+            {% endfor %}
+          </ul>
+          <div class="diagnosa-button-container">
+            <button type="submit" class="diagnosa-button">
+              <span class="icon"><img src="{{ url_for('static', filename='images/diagnosa.png') }}" alt="" /></span>
+              Diagnosa
+            </button>
+          </div>
+        </form>
+      </div>
     </div>
-    <div class="results-container"
-        style="max-width: 900px; margin: 20px auto; padding: 20px; background: #FFFFFF; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
-        <div class="results">
-            {% if hasil_deteksi %}
-            <ul>
-                {% for penyakit_info in hasil_deteksi %}
-                <li>
-                    <h3>{{ penyakit_info.penyakit }}</h3>
-                    <p>{{ "%.2f"|format(penyakit_info.weighted_matching_percentage * 100) }}%</p>
-                    <p>Detail: {{ solusi_obat(penyakit_info.penyakit).solusi }}</p>
-                    <p>Obat: {{ solusi_obat(penyakit_info.penyakit).obat }}</p>
-                </li>
-                {% endfor %}
-            </ul>
-            {% else %}
-            <p class="no-detection">Tidak ada penyakit yang terdeteksi berdasarkan gejala yang diinputkan.</p>
-            {% endif %}
-        </div>
+    <div class="results-container" style="max-width: 900px; margin: 20px auto; padding: 20px; background: #ffffff; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1)">
+      <div class="results">
+        {% if hasil_deteksi %}
+        <ul>
+          {% for penyakit_info in hasil_deteksi %}
+          <li>
+            <h3>{{ penyakit_info.penyakit }}</h3>
+            <p>{{ "%.2f"|format(penyakit_info.weighted_matching_percentage * 100) }}%</p>
+            <p>Detail: {{ solusi_obat(penyakit_info.penyakit).solusi }}</p>
+            <p>Obat: {{ solusi_obat(penyakit_info.penyakit).obat }}</p>
+          </li>
+          {% endfor %}
+        </ul>
+        {% else %}
+        <p class="no-detection">Tidak ada penyakit yang terdeteksi berdasarkan gejala yang diinputkan.</p>
+        {% endif %}
+      </div>
     </div>
-</body>
-
+  </body>
 </html>
