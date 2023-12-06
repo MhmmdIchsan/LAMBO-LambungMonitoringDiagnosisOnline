@@ -80,6 +80,7 @@
 
         .second-section {
             display: flex;
+            margin-top: 60px;
             justify-content: center;
             /* Centers the content horizontally */
             align-items: center;
@@ -331,6 +332,7 @@
             color: #888;
             text-align: center;
             padding: 20px;
+            margin-top: 40px;
         }
 
         .diagnosa-button-container {
@@ -372,6 +374,7 @@
         }
 
         .button {
+            border-radius: 10px;
             background-color: #2BAE9C;
             /* Green */
             border: none;
@@ -388,7 +391,7 @@
             cursor: pointer;
             position: absolute;
             /* Make it absolute positioned */
-            left: 25%;
+            left: 29%;
         }
 
         .button:hover {
@@ -416,7 +419,6 @@
 </head>
 
 <body>
-    <a href="/" class="button button2"> Back </a>
     <div class="home-section">
         <div class="text-content">
             <h1>Halo, {{ nama_pengguna }}!</h1>
@@ -450,7 +452,8 @@
                 </div>
             </form>
         </div>
-    </div>>
+    </div>
+    <a href="/" class="button button2"> Back </a>
     {% if penyakit_tertinggi %}
     <div class="second-section" id="hasil-diagnosa">
         <div class="illustration2"></div>
@@ -474,6 +477,8 @@
     {% else %}
     <p class="no-detection">Tidak ada penyakit yang terdeteksi berdasarkan gejala yang diinputkan.</p>
     {% endif %}
+
+    
 </body>
 <script>
     // Setelah hasil dihasilkan atau formulir diproses
